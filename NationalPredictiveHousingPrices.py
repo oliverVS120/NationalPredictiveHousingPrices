@@ -10,6 +10,8 @@ from sklearn.metrics import mean_squared_error
 # --------------------------
 # Data Loading Function
 # --------------------------
+
+
 def load_housing_data():
     """Load and return the California housing dataset as a DataFrame."""
     data = fetch_california_housing()
@@ -20,6 +22,8 @@ def load_housing_data():
 # --------------------------
 # Visualization Functions
 # --------------------------
+
+
 def plot_distribution(df):
     """Plot distribution of median house values."""
     plt.figure(figsize=(8, 4))
@@ -59,6 +63,8 @@ def plot_correlation(df):
 # --------------------------
 # Modeling Functions
 # --------------------------
+
+
 def train_linear_regression(df):
     """Train a linear regression model and plot predictions."""
     X = df.drop('MedHouseVal', axis=1)
@@ -80,6 +86,7 @@ def train_linear_regression(df):
     plt.show()
     
     return model
+
 
 def tune_hyperparameters(df, model=RandomForestRegressor(), param_grid=None):
     """
@@ -135,6 +142,9 @@ def tune_hyperparameters(df, model=RandomForestRegressor(), param_grid=None):
 # --------------------------
 # Main Execution
 # --------------------------
+
+
+
 if __name__ == "__main__":
     # Load data
     df = load_housing_data()
